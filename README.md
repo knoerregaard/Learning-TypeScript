@@ -32,4 +32,4 @@ The following chapter explains the following core concepts of TypeScript
 - Models
 - Interfaces
 
-### Class declaration
+### 5.1 Class declaration
