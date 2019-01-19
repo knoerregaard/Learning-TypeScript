@@ -24,6 +24,8 @@ The student can demonstrate a partial understanding and use of JavaScript
 Source: https://blogs.msdn.microsoft.com/somasegar/2012/10/01/typescript-javascript-development-at-application-scale/
 
 ## 5. Key concepts
+This chapter is heavily influenced by the TypeScript documentation. Please refer to this documentation for detail: https://www.typescriptlang.org/docs/handbook/classes.html.
+
 The following chapter explains the following core concepts of TypeScript
 - Class declarion
 - Modularity
@@ -89,6 +91,9 @@ The keyword 'extends' i use to extend the superclass 'Person', thereby giving th
 
 A more complex example includes the use of the constructor. When the superclass constructor is included as a member, the subclasses will have to call the super() method. See the following example
 
+Example
+Inheritance_example_02
+
 ```
 class Person {
     name: string;
@@ -115,3 +120,49 @@ let student = new Student();
 student.talk("I am a student");
 student.averageGrade();
 ```
+
+### Access modifiers (public by default)
+When public (default when not explicit) the project has access to class and members. 
+
+When a property, constructor og method is set to private only the members within the class can access it.
+
+When a property, constructor og method is set to 'protected' the members within the class and derived classes can access it.
+
+Members can also by set to readonly.
+
+### Accessors
+
+Typescript supports getters and setters as a way intercept the access to the members of a class. This allows for at more detailed controll over how members are accessed. 
+
+Example
+Accessors_example_01
+
+```
+let passedPriorSemester : boolean = true ;
+let semester = string;
+
+class Student {
+    private _semester: string;
+
+    get semester(): string {
+        return this._semester;
+    }
+
+    set education(newSemester: string) {
+        if (passedPriorSemester == true) {
+            this._semester = newSemester;
+        }
+        else {
+            console.log("Error: Student did not pass prior semester!");
+        }
+    }
+}
+
+let student = new Student();
+employee.semester = "second semester";
+if (employee.passedPriorSemester) {
+    console.log(employee.semester);
+}
+```
+
+
