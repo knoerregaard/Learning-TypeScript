@@ -132,7 +132,7 @@ Members can also by set to readonly.
 
 ### Accessors
 
-Typescript supports getters and setters as a way intercept the access to the members of a class. This allows for at more detailed controll over how members are accessed. 
+Typescript supports getters and setters as a way intercept the access to the members of a class. This allows for at more detailed control over how members are being accessed. 
 
 Example
 Accessors_example_01
@@ -164,5 +164,42 @@ if (employee.passedPriorSemester) {
     console.log(employee.semester);
 }
 ```
+NOTE
 
+> First, accessors require you to set the compiler to output ECMAScript 5 or higher. Downlevelling to ECMAScript 3 is not supported. Second, accessors with a get and no set are automatically inferred to be readonly. This is helpful when generating a .d.ts file from your code, because users of your property can see that they can’t change it.
 
+### Static
+'Static' keyword is use whenever we would like to static members of our class. A static member is accesible even without an instantiated object. The following example is borrowed from beforementioned documentation.
+
+```
+class Grid {
+    static origin = {x: 0, y: 0};
+    calculateDistanceFromOrigin(point: {x: number; y: number;}) {
+        let xDist = (point.x - Grid.origin.x);
+        let yDist = (point.y - Grid.origin.y);
+        return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
+    }
+    constructor (public scale: number) { }
+}
+
+let grid1 = new Grid(1.0);  // 1x scale
+let grid2 = new Grid(5.0);  // 5x scale
+
+console.log(grid1.calculateDistanceFromOrigin({x: 10, y: 10}));
+console.log(grid2.calculateDistanceFromOrigin({x: 10, y: 10}));
+```
+
+### Abstract classes
+
+Abstract classes are base classes from which other classes may be derived. 
+
+```
+abstract class Animal {
+    abstract makeSound(): void;
+    move(): void {
+        console.log("roaming the earth...");
+    }
+}
+```
+
+Other topics
