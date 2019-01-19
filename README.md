@@ -36,7 +36,8 @@ The following chapter explains the following core concepts of TypeScript
 > Traditional JavaScript uses functions and prototype-based inheritance to build up reusable components, but this may feel a bit awkward to programmers more comfortable with an object-oriented approach, where classes inherit functionality and objects are built from these classes. Starting with ECMAScript 2015, also known as ECMAScript 6, JavaScript programmers will be able to build their applications using this object-oriented class-based approach. In TypeScript, we allow developers to use these techniques now, and compile them down to JavaScript that works across all major browsers and platforms, without having to wait for the next version of JavaScript
 Source: https://www.typescriptlang.org/docs/handbook/classes.html
 
-Example 1 | Simple class
+Example
+Class_example_01
 ```
 class Person {
     age: number;
@@ -51,8 +52,66 @@ class Person {
 let person = new Person(30);
 ```
 The class Person has three members; a property callged age, a constructor() and a method called returnAge().
-The keyword 'this' denotes a reference to the the objects own members.
+The keyword 'this' denotes a reference to the objects own members.
 In the last line we create a new object 'person' with the 'new' keyword.
 
 ### 5.2 Inheritance
+Use the classic concept of inheritance in order to create superclasses and subclasses.
 
+Example
+Inheritance_example_01
+
+```
+class Person {
+    name: string;
+    age: number;
+    talk(message: string){
+        console.log(message)
+    }
+}
+
+class Student extends Person {
+    education : string;
+    grades: [];
+    averageGrade() {
+        let avg = 0;
+        grades.forEach(funcion(grade){
+            avg + grade;
+        })
+        return avg/grades.count;
+    }
+}
+let student = new Student();
+student.talk("I am a student");
+student.averageGrade();
+```
+The keyword 'extends' i use to extend the superclass 'Person', thereby giving the class 'Student' access to the same members of class 'Person'.
+
+A more complex example includes the use of the constructor. When the superclass constructor is included as a member, the subclasses will have to call the super() method. See the following example
+
+```
+class Person {
+    name: string;
+    age: number;
+    constructor(name : string){ this.name = name}
+    talk(message: string){
+        console.log(message)
+    }
+}
+
+class Student extends Person {
+    education : string;
+    grades: [];
+    constructor(name: string) { super(name); }
+    averageGrade() {
+        let avg = 0;
+        grades.forEach(funcion(grade){
+            avg + grade;
+        })
+        return avg/grades.count;
+    }
+}
+let student = new Student();
+student.talk("I am a student");
+student.averageGrade();
+```
