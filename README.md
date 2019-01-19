@@ -28,6 +28,7 @@ This chapter is heavily influenced by the TypeScript documentation. Please refer
 
 The following chapter explains the following core concepts of TypeScript
 - Types
+- Variable declaration
 - Class declarion
 - Modularity
 - Models
@@ -88,14 +89,14 @@ let notSure: any = 4;
 notSure = "maybe a string instead";
 notSure = false; // okay, definitely a boolean
 ```
-### Types | Void
+### 5.1.7 Types | Void
 Void is being used whenever a function is returning nothing
 ```
 function warnUser(): void {
     console.log("This is my warning message");
 }
 ```
-### Types | Object
+### 5.1.8 Types | Object
 object is a type that represents the non-primitive type, i.e. any thing that is not number, string, boolean, symbol, null, or undefined
 ```
 declare function create(o: object | null): void;
@@ -108,7 +109,34 @@ create("string"); // Error
 create(false); // Error
 create(undefined); // Error
 ```
-### 5.2.1 Variable declaration
+## 5.2. Variable declaration
+We have have the following variable declaration at our disposal
+- const
+- let
+- var
+
+Use 'const' if you would like to disable the posibility of reassignment of variables.
+'let' is actually replacing 'var'. Because of scoping issues 'let' has been introduced. Refere to TypeScript documentation for detailed information about scoping issues. 
+
+'let' is a so called block-scoping variable. This means that it is not visible to the outside/nearest containing block.
+
+In the following example 'let b' is being declared inside an if block. Let is not visible to containing function.
+
+```
+function fun(input: number) {
+    let x = 1;
+
+    if (true) {
+        // x is vissible
+        let y = x + 1;
+        return y;
+    }
+
+    // error : y is not visible
+    return y;
+}
+```
+Please get more familiar with 'let' and 'var' in the TypeScript documentation https://www.typescriptlang.org
 
 ### 5.3.1 Interfaces
 
