@@ -109,7 +109,7 @@ create("string"); // Error
 create(false); // Error
 create(undefined); // Error
 ```
-## 5.2. Variable declaration
+## 5.2 Variable declaration
 We have have the following variable declaration at our disposal
 - const
 - let
@@ -138,7 +138,7 @@ function fun(input: number) {
 ```
 Please get more familiar with 'let' and 'var' in the TypeScript documentation https://www.typescriptlang.org
 
-### 5.3 Interfaces
+## 5.3 Interfaces
 Interfaces are defining values and act as binding contracts from outside code.
 
 #### 5.3.1 Interfaces | simple interface
