@@ -33,3 +33,26 @@ The following chapter explains the following core concepts of TypeScript
 - Interfaces
 
 ### 5.1 Class declaration
+> Traditional JavaScript uses functions and prototype-based inheritance to build up reusable components, but this may feel a bit awkward to programmers more comfortable with an object-oriented approach, where classes inherit functionality and objects are built from these classes. Starting with ECMAScript 2015, also known as ECMAScript 6, JavaScript programmers will be able to build their applications using this object-oriented class-based approach. In TypeScript, we allow developers to use these techniques now, and compile them down to JavaScript that works across all major browsers and platforms, without having to wait for the next version of JavaScript
+Source: https://www.typescriptlang.org/docs/handbook/classes.html
+
+Example 1 | Simple class
+```
+class Person {
+    age: number;
+    constructor(message: string) {
+        this.age = message;
+    }
+    returnAge() {
+        return "returnAge, " + this.age;
+    }
+}
+
+let person = new Person(30);
+```
+The class Person has three members; a property callged age, a constructor() and a method called returnAge().
+The keyword 'this' denotes a reference to the the objects own members.
+In the last line we create a new object 'person' with the 'new' keyword.
+
+### 5.2 Inheritance
+
