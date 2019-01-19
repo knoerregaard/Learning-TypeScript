@@ -1,4 +1,4 @@
-# Learning-TypeScript
+# Learning TypeScript
 
 ## Index
 1. Index
