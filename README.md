@@ -5,6 +5,7 @@
 2. Prerequisite
 3. Learning goals and learning path
 4. Introduction to TypeScript
+5. Key concepts
 
 ## 2. Prerequisite
 JavaScript
@@ -22,3 +23,13 @@ The student can demonstrate a partial understanding and use of JavaScript
 
 Source: https://blogs.msdn.microsoft.com/somasegar/2012/10/01/typescript-javascript-development-at-application-scale/
 
+## 5. Key concepts
+The following chapter explains the following core concepts of TypeScript
+- Class declarion
+- Modularity
+- Types
+- Type inference
+- Models
+- Interfaces
+
+### Class declaration
