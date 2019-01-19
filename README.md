@@ -8,7 +8,7 @@
 5. Key concepts
 
 ## 2. Prerequisite
-### JavaScript
+### 2.1 JavaScript
 The student can demonstrate a partial understanding and use of JavaScript
 
 ## 3. Learning goals and learning path
@@ -33,13 +33,86 @@ The following chapter explains the following core concepts of TypeScript
 - Models
 - Interfaces
 
-### 5.1.1 Types
+## 5.1 Types
+Following types are supported
+- Boolean
+- Number
+- String
+- Array
+- Tuple
+- Enum
+- Any
+- Void
+- Null and Unidentified
+- Never
+- Oject
 
+The following subchapters 5.1.1 - 5.1.6 will shortly explain a subset of the mentioned types. 
+
+### 5.1.1 Types | Boolean
+```
+let isActive: boolean = false;
+```
+
+### 5.1.2 Types | Number
+All numbers are floating point values.
+```
+let decimal: number = 6;
+let hex: number = 0xf00d;
+let binary: number = 0b1010;
+let octal: number = 0o744;
+```
+### 5.1.3 Types | String
+Textual type
+```
+let name: string = "axel";
+```
+### 5.1.4 Types | Array
+The array can be initialized as such
+```
+let list: number[] = [1, 2, 3];
+```
+or
+```
+let list: Array<number> = [1, 2, 3];
+```
+### 5.1.5 Types | Enum
+```
+enum Color {Red, Green, Blue}
+let c: Color = Color.Green;
+```
+### 5.1.6 Types | Any
+Any is used whenever the type is unkown or differs depending on the application
+```
+let notSure: any = 4;
+notSure = "maybe a string instead";
+notSure = false; // okay, definitely a boolean
+```
+### Types | Void
+Void is being used whenever a function is returning nothing
+```
+function warnUser(): void {
+    console.log("This is my warning message");
+}
+```
+### Types | Object
+object is a type that represents the non-primitive type, i.e. any thing that is not number, string, boolean, symbol, null, or undefined
+```
+declare function create(o: object | null): void;
+
+create({ prop: 0 }); // OK
+create(null); // OK
+
+create(42); // Error
+create("string"); // Error
+create(false); // Error
+create(undefined); // Error
+```
 ### 5.2.1 Variable declaration
 
 ### 5.3.1 Interfaces
 
-### 5.4.1 Class declaration
+### 5.4 Class declaration
 
 > Traditional JavaScript uses functions and prototype-based inheritance to build up reusable components, but this may feel a bit awkward to programmers more comfortable with an object-oriented approach, where classes inherit functionality and objects are built from these classes. Starting with ECMAScript 2015, also known as ECMAScript 6, JavaScript programmers will be able to build their applications using this object-oriented class-based approach. In TypeScript, we allow developers to use these techniques now, and compile them down to JavaScript that works across all major browsers and platforms, without having to wait for the next version of JavaScript
 Source: https://www.typescriptlang.org/docs/handbook/classes.html
