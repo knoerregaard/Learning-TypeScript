@@ -8,7 +8,7 @@
 5. Key concepts
 
 ## 2. Prerequisite
-JavaScript
+### JavaScript
 The student can demonstrate a partial understanding and use of JavaScript
 
 ## 3. Learning goals and learning path
