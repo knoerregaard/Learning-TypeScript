@@ -1,6 +1,6 @@
 # Learning TypeScript
 
-## Index
+## 1. Index
 1. Index
 2. Prerequisite
 3. Learning goals and learning path
