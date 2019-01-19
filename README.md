@@ -27,14 +27,20 @@ Source: https://blogs.msdn.microsoft.com/somasegar/2012/10/01/typescript-javascr
 This chapter is heavily influenced by the TypeScript documentation. Please refer to this documentation for detail: https://www.typescriptlang.org/docs/handbook/classes.html.
 
 The following chapter explains the following core concepts of TypeScript
+- Types
 - Class declarion
 - Modularity
-- Types
-- Type inference
 - Models
 - Interfaces
 
-### 5.1 Class declaration
+### 5.1.1 Types
+
+### 5.2.1 Variable declaration
+
+### 5.3.1 Interfaces
+
+### 5.4.1 Class declaration
+
 > Traditional JavaScript uses functions and prototype-based inheritance to build up reusable components, but this may feel a bit awkward to programmers more comfortable with an object-oriented approach, where classes inherit functionality and objects are built from these classes. Starting with ECMAScript 2015, also known as ECMAScript 6, JavaScript programmers will be able to build their applications using this object-oriented class-based approach. In TypeScript, we allow developers to use these techniques now, and compile them down to JavaScript that works across all major browsers and platforms, without having to wait for the next version of JavaScript
 Source: https://www.typescriptlang.org/docs/handbook/classes.html
 
@@ -202,4 +208,4 @@ abstract class Animal {
 }
 ```
 
-Other topics
+Other topics of interesst: constructor functions, 
