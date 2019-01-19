@@ -120,7 +120,7 @@ Use 'const' if you would like to disable the posibility of reassignment of varia
 
 'let' is a so called block-scoping variable. This means that it is not visible to the outside/nearest containing block.
 
-In the following example 'let b' is being declared inside an if block. Let is not visible to containing function.
+In the following example 'let b' is being declared inside an if block. 'let' is not visible to containing function.
 
 ```
 function fun(input: number) {
@@ -138,7 +138,59 @@ function fun(input: number) {
 ```
 Please get more familiar with 'let' and 'var' in the TypeScript documentation https://www.typescriptlang.org
 
-### 5.3.1 Interfaces
+### 5.3 Interfaces
+Interfaces are defining values and act as binding contracts from outside code.
+
+#### 5.3.1 Interfaces | simple interface
+An interfaces can be written as follow
+
+```
+interface Person{
+    name: string;
+    age: number;
+    getName(){
+        return this.name;
+    }
+}
+```
+Pretty simple! We can use this interface like this:
+
+```
+function f(me: Person){
+    console.log(me.getName());
+}
+```
+In this example the interface is only being used to shape the values. So if name is of type 'Person' I have to shape my data so it is consisten with the interface.
+
+#### 5.3.2 Interfaces | Optional properties
+It is allowed to have optional property members inside your interface like this
+
+```
+interface Person{
+    name: string;
+    age?: number;
+    getName(){
+        return this.name;
+    }
+}
+```
+So whenever you implement the interface 'age' will be optional.
+
+#### 5.3.3 Interfaces | Class types
+As with C# we can inforce that a class is being implemented in accordance to an interface
+```
+interface ClockInterface {
+    currentTime: Date;
+}
+
+class Clock implements ClockInterface {
+    currentTime: Date;
+    constructor(h: number, m: number) { }
+}
+```
+
+#### 5.3.4 Interfaces | Other topics
+Other topics to explore concerning interfaces are readonly, excess property check, function types, indexable types, 
 
 ### 5.4 Class declaration
 
