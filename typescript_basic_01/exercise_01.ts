@@ -8,7 +8,7 @@
 export default () => {
     // ======== Exercise 01.1 ========
     // Annotate the following pritive types, arrays and 'any' types
-    
+     
     let pi = '3.14159';
     let age = '25';
     let name = 'Hans Christian Andersen';
