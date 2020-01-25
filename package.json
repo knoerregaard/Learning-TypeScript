@@ -1,0 +1,24 @@
+{
+  "name": "learning-typescript",
+  "version": "1.0.0",
+  "description": "1. Index\r 2. Prerequisite\r 3. Learning goals and learning path\r 4. Introduction to TypeScript\r 5. Key concepts",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jasmine": "^3.5.1",
+    "jasmine": "^3.5.0"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knoerregaard/Learning-TypeScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knoerregaard/Learning-TypeScript/issues"
+  },
+  "homepage": "https://github.com/knoerregaard/Learning-TypeScript#readme"
+}
