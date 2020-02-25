@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./../node_modules/systemjs/dist/system.min.js">
+    System.config({
+      // packages tells the System loader how to load when no filename and/or no extension
+      packages: {
+          "/": {
+            defaultJSExtensions: true
+          }
+        }
+    });
+    System.import("./exercise_03.js");
+    console.log(y());
+    </script>
+</head>
+<body>
+    <h2>asdasd</h2>
+    <!-- <script src="./exercise_02.js"></script> -->
+    <!-- <script src="./exercise_03.js"></script> -->
+
+    <!-- <script>System.import('./exercise_02.js')</script> -->
+</body>
+</html>

@@ -6,7 +6,8 @@
   "dependencies": {},
   "devDependencies": {
     "@types/jasmine": "^3.5.1",
-    "jasmine": "^3.5.0"
+    "jasmine": "^3.5.0",
+    "systemjs": "^6.2.4"
   },
   "scripts": {
     "test": "jasmine"
